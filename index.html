@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Battle Grounds 6 - Simple FPS</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main id="game-shell" aria-label="Battle Grounds 6 simple first person shooter">
+      <canvas id="game" width="960" height="540" aria-label="Game canvas"></canvas>
+
+      <section id="hud" aria-live="polite">
+        <div class="hud-card"><span>Health</span><strong id="health">100</strong></div>
+        <div class="hud-card"><span>Ammo</span><strong id="ammo">12 / 60</strong></div>
+        <div class="hud-card"><span>Wave</span><strong id="wave">1</strong></div>
+        <div class="hud-card"><span>Score</span><strong id="score">0</strong></div>
+      </section>
+
+      <div id="crosshair" aria-hidden="true"></div>
+
+      <section id="overlay">
+        <h1>Battle Grounds 6</h1>
+        <p>A tiny, working first-person shooter built with the HTML canvas.</p>
+        <button id="start-button" type="button">Click to Deploy</button>
+        <ul>
+          <li><kbd>WASD</kbd> move, <kbd>Mouse</kbd> look</li>
+          <li><kbd>Click</kbd> shoot, <kbd>R</kbd> reload</li>
+          <li><kbd>Shift</kbd> sprint, <kbd>Esc</kbd> pause</li>
+        </ul>
+      </section>
+
+      <section id="message" class="hidden" aria-live="assertive"></section>
+    </main>
+
+    <script src="game.js"></script>
+  </body>
+</html>
